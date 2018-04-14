@@ -2,7 +2,7 @@ const events = require('./events.js');
 
 const departmentsDiv = document.getElementById('departments');
 
-const printToDom = (dataToPrint) => {
+const printDepartmentToDom = (dataToPrint) => {
   departmentsDiv.innerHTML = domString(dataToPrint);
   events.addDepartmentsEvents();
 };
@@ -18,4 +18,4 @@ const domString = (departmentsArray) => {
   return stringToPrint;
 };
 
-module.exports = printToDom;
+module.exports = printDepartmentToDom;

@@ -1,3 +1,3 @@
-const startApplication = require('./data.js');
+const startApplication = require('./dataGatekeeper.js');
 
 startApplication();
