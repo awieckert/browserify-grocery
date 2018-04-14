@@ -1,14 +1,17 @@
+const events = require('./events.js');
+
 const departmentsDiv = document.getElementById('departments');
 
 const printToDom = (dataToPrint) => {
   departmentsDiv.innerHTML = domString(dataToPrint);
+  events.addDepartmentsEvents();
 };
 
 const domString = (departmentsArray) => {
   let stringToPrint = '';
   departmentsArray.forEach((item) => {
     stringToPrint += `<div class='col-md-3 department'>`;
-    stringToPrint +=  `<h3 class='hide'>${item.name}</h3>`;
+    stringToPrint +=  `<h3 class='department-title hide' data-department-id='${item.id}'>${item.name}</h3>`;
     stringToPrint +=  `<img src='${item.img}'>`;
     stringToPrint += `</div>`;
   });
