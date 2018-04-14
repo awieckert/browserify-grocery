@@ -1,9 +1,10 @@
 const getDepartments = require('./departments.js');
 const printDepartmentToDom = require('./departmentDom.js');
+const data = require('./data.js');
 
 function successFunction () {
   const departmentsData = JSON.parse(this.responseText).departments;
-  console.log('Departments Data: ', departmentsData);
+  data.setDepartments(departmentsData);
   printDepartmentToDom(departmentsData);
 };
 
