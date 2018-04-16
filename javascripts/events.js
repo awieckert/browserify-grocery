@@ -17,6 +17,7 @@ const hideDepartmentName = (e) => {
 };
 
 const showItems = (e) => {
+  // const departmentId = e.target.previousSibling.dataset.departmentId;
   console.log('data-id: ', e.target.previousSibling.dataset.departmentId);
 
   // TODO: filter items by departmentId
