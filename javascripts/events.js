@@ -1,3 +1,7 @@
+const data = require('./data.js');
+const printToDom = require('./itemsDom.js');
+
+const departmentContainerDiv = document.getElementById('departments');
 const departmentCards = document.getElementsByClassName('department');
 
 const showDepartmentName = (e) => {
@@ -17,9 +21,10 @@ const hideDepartmentName = (e) => {
 };
 
 const showItems = (e) => {
-  console.log('data-id: ', e.target.previousSibling.dataset.departmentId);
-
-  // TODO: filter items by departmentId
+  const departmentId = e.target.previousSibling.dataset.departmentId;
+  const selectedItems = data.getItemsByDepartment(departmentId);
+  departmentContainerDiv.innerHTML = '';
+  printToDom(selectedItems);
 };
 
 const addDepartmentsEvents = () => {
