@@ -22,9 +22,7 @@ const hideDepartmentName = (e) => {
 
 const showItems = (e) => {
   const departmentId = e.target.previousSibling.dataset.departmentId;
-  console.log('data-id: ', departmentId);
   const selectedItems = data.getItemsByDepartment(departmentId);
-  console.log('selectedItems: ', selectedItems);
   departmentContainerDiv.innerHTML = '';
   printToDom(selectedItems);
 };
