@@ -33,3 +33,12 @@ button {
   left: 100px;
   font-size: 25px;
 }
+
+.item-image {
+  height: 100px;
+  width: 100px;
+}
+
+.item .panel {
+  height: 200px;
+}
