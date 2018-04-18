@@ -1,6 +1,7 @@
 const startApplication = require('./dataGatekeeper.js');
 const buttonEvents = require('./buttonEvents.js');
 
+buttonEvents.cartButtonEvent();
 buttonEvents.departmentsButton();
 startApplication();
 
