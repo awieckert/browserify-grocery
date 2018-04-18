@@ -1,5 +1,7 @@
 const startApplication = require('./dataGatekeeper.js');
+const buttonEvents = require('./buttonEvents.js');
 
+buttonEvents.departmentsButton();
 startApplication();
 
 $('body').on('click', '.btn-number', function (e) {
