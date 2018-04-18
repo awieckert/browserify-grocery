@@ -1,4 +1,5 @@
 const startApplication = require('./dataGatekeeper.js');
+const cartDom = require('./cartDom.js');
 const goToDepartments = document.getElementById('go-to-departments');
 const departmentsDiv = document.getElementById('departments');
 const itemsDiv = document.getElementById('items');
@@ -10,7 +11,7 @@ const cartButtonEvent = () => {
     departmentsDiv.innerHTML = '';
     itemsDiv.innerHTML = '';
     cartDiv.innerHTML = '';
-    // print to cart dom
+    cartDom();
   });
 };
 
